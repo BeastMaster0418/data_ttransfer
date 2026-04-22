@@ -13,7 +13,7 @@
         "kind": 5,
         "importPath": "data",
         "description": "data",
-        "peekOfCode": "file_path_1 = \"Extraction File.xlsx\"\nfile_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionary\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")",
+        "peekOfCode": "file_path_1 = \"Extraction File.xlsx\"\nfile_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionaryd\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")",
         "detail": "data",
         "documentation": {}
     },
@@ -22,7 +22,7 @@
         "kind": 5,
         "importPath": "data",
         "description": "data",
-        "peekOfCode": "file_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionary\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")",
+        "peekOfCode": "file_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionaryd\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")",
         "detail": "data",
         "documentation": {}
     },
@@ -31,7 +31,7 @@
         "kind": 5,
         "importPath": "data",
         "description": "data",
-        "peekOfCode": "file_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionary\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")",
+        "peekOfCode": "file_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionaryd\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")",
         "detail": "data",
         "documentation": {}
     },
