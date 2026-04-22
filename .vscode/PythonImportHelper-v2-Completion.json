@@ -1,0 +1,38 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "file_path",
+        "kind": 5,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "file_path = \"Extraction_File.xlsx\"\n# Read all sheets into a dictionary\nall_sheets = pd.read_excel(file_path, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")\n    print('='*60)",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "all_sheets",
+        "kind": 5,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "all_sheets = pd.read_excel(file_path, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")\n    print('='*60)\n    print(df.to_string(index=True))\nprint(f\"\\nTotal sheets loaded: {len(data)}\")",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "data = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")\n    print('='*60)\n    print(df.to_string(index=True))\nprint(f\"\\nTotal sheets loaded: {len(data)}\")",
+        "detail": "data",
+        "documentation": {}
+    }
+]
