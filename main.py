@@ -18,12 +18,12 @@ def run(
     include_validation: bool = False,
 ):
     print("── Extract ─────────────────────────────────────────")
-    extraction, customer = load_data(extraction_path, customer_path)
-    print(f"  Extraction rows : {len(extraction)}")
-    print(f"  Customer rows   : {len(customer)}")
+    raw_extraction_data, customer_rm_list = load_data(extraction_path, customer_path)
+    print(f"  Extraction rows : {len(raw_extraction_data)}")
+    print(f"  Customer rows   : {len(customer_rm_list)}")
 
     print("── Transform ───────────────────────────────────────")
-    df = transform(extraction, customer)
+    df = transform(raw_extraction_data, customer_rm_list)
     print(f"  Output rows     : {len(df)}")
 
     print("── Validate ────────────────────────────────────────")

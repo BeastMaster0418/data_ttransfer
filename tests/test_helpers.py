@@ -112,7 +112,7 @@ class TestSafeRef:
         assert result == "X" * 30
 
     def test_exactly_30_chars(self):
-        ref = "111111111111111111111111111111111"  # 30 chars
+        ref = "1" * 30
         assert safe_ref(ref) == ref
 
     def test_alphanumeric_string(self):

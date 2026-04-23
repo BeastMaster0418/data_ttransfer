@@ -65,30 +65,6 @@
         "documentation": {}
     },
     {
-        "label": "EXTRACTION_FILE",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "CUSTOMER_FILE",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -323,14 +299,6 @@
         "documentation": {}
     },
     {
-        "label": "load_data",
-        "importPath": "etl.extract",
-        "description": "etl.extract",
-        "isExtraImport": true,
-        "detail": "etl.extract",
-        "documentation": {}
-    },
-    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
@@ -348,7 +316,7 @@
         "documentation": {}
     },
     {
-        "label": "_build_customer_lookup",
+        "label": "build_customer_lookup_index",
         "importPath": "etl.transform",
         "description": "etl.transform",
         "isExtraImport": true,
@@ -356,7 +324,7 @@
         "documentation": {}
     },
     {
-        "label": "_get_customer_field",
+        "label": "get_customer_field_by_ref",
         "importPath": "etl.transform",
         "description": "etl.transform",
         "isExtraImport": true,
@@ -463,6 +431,33 @@
         "documentation": {}
     },
     {
+        "label": "build_customer_lookup_index",
+        "kind": 2,
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "peekOfCode": "def build_customer_lookup_index(customer: pd.DataFrame) -> pd.DataFrame:\n    \"\"\"\n    Index customer data by the numeric suffix of Item ID.\n    e.g. 'GFP-10001' -> key 10001.0\n    \"\"\"\n    df = customer.copy()\n    df[\"_key\"] = df[\"Item ID\"].astype(str).str.extract(r\"(\\d+)$\")[0]\n    df[\"_key\"] = pd.to_numeric(df[\"_key\"], errors=\"coerce\")\n    return df.dropna(subset=[\"_key\"]).set_index(\"_key\")\ndef get_customer_field_by_ref(lookup: pd.DataFrame, ref_num, field: str):",
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "get_customer_field_by_ref",
+        "kind": 2,
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "peekOfCode": "def get_customer_field_by_ref(lookup: pd.DataFrame, ref_num, field: str):\n    \"\"\"Look up a single field from the customer table by reference number.\"\"\"\n    try:\n        key = float(ref_num)\n    except (TypeError, ValueError):\n        return None\n    if key not in lookup.index:\n        return None\n    row = lookup.loc[key]\n    val = row[field] if isinstance(row, pd.Series) else row[field].iloc[0]",
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "map_extraction_row_to_output",
+        "kind": 2,
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "peekOfCode": "def map_extraction_row_to_output(src_row: pd.Series, lookup: pd.DataFrame, is_first: bool) -> dict:\n    \"\"\"Map one Extraction File row to one output template row.\"\"\"\n    ref     = src_row[\"Reference Number\"]\n    ref_str = safe_ref(ref)\n    inci_exact, inci_min, inci_max = parse_inci_comp(src_row.get(\"INCI Comp\"))\n    imp_raw  = src_row.get(\"Impurity Comp\")\n    imp_num  = extract_number_max(imp_raw)\n    imp_unit = extract_impurity_unit(imp_raw) if pd.notna(imp_raw) else None\n    alg_num  = extract_allergen_max(src_row.get(\"Allergen Comp\"))\n    trade_name = (",
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
         "label": "transform",
         "kind": 2,
         "importPath": "etl.transform",
@@ -532,24 +527,6 @@
         "description": "tests.conftest",
         "peekOfCode": "def customer_empty():\n    \"\"\"Customer table with no rows.\"\"\"\n    return pd.DataFrame({\n        \"Item ID\": pd.Series([], dtype=str),\n        \"Client Preferred Trade Name\": pd.Series([], dtype=str),\n        \"Status\": pd.Series([], dtype=str),\n        \"Additional Description\": pd.Series([], dtype=str),\n        \"Average Cost\": pd.Series([], dtype=float),\n        \"Last Cost\": pd.Series([], dtype=float),\n        \"Qty On Hand\": pd.Series([], dtype=float),",
         "detail": "tests.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "TestLoadDataIntegration",
-        "kind": 6,
-        "importPath": "tests.test_extract",
-        "description": "tests.test_extract",
-        "peekOfCode": "class TestLoadDataIntegration:\n    def test_returns_two_dataframes(self):\n        extraction, customer = load_data()\n        assert isinstance(extraction, pd.DataFrame)\n        assert isinstance(customer, pd.DataFrame)\n    def test_extraction_has_expected_columns(self):\n        extraction, _ = load_data()\n        expected = {\n            \"Reference Number\", \"Trade Name\", \"Manufacturer\",\n            \"INCI\", \"INCI Comp\", \"Incidental?\",",
-        "detail": "tests.test_extract",
-        "documentation": {}
-    },
-    {
-        "label": "TestLoadDataCustomPaths",
-        "kind": 6,
-        "importPath": "tests.test_extract",
-        "description": "tests.test_extract",
-        "peekOfCode": "class TestLoadDataCustomPaths:\n    def test_explicit_paths_work(self):\n        extraction, customer = load_data(\n            extraction_path=EXTRACTION_FILE,\n            customer_path=CUSTOMER_FILE,\n        )\n        assert len(extraction) > 0\n        assert len(customer) > 0\n    def test_missing_file_raises(self, tmp_path):\n        with pytest.raises(Exception):",
-        "detail": "tests.test_extract",
         "documentation": {}
     },
     {
@@ -656,7 +633,7 @@
         "kind": 6,
         "importPath": "tests.test_transform",
         "description": "tests.test_transform",
-        "peekOfCode": "class TestBuildCustomerLookup:\n    def test_indexes_by_numeric_suffix(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)\n        assert 10001.0 in lookup.index\n    def test_multiple_rows(self, customer_multi):\n        lookup = _build_customer_lookup(customer_multi)\n        assert 10001.0 in lookup.index\n        assert 10002.0 in lookup.index\n        assert 10005.0 in lookup.index\n    def test_empty_customer(self, customer_empty):",
+        "peekOfCode": "class TestBuildCustomerLookup:\n    def test_indexes_by_numeric_suffix(self, customer_basic):\n        lookup = build_customer_lookup_index(customer_basic)\n        assert 10001.0 in lookup.index\n    def test_multiple_rows(self, customer_multi):\n        lookup = build_customer_lookup_index(customer_multi)\n        assert 10001.0 in lookup.index\n        assert 10002.0 in lookup.index\n        assert 10005.0 in lookup.index\n    def test_empty_customer(self, customer_empty):",
         "detail": "tests.test_transform",
         "documentation": {}
     },
@@ -665,7 +642,7 @@
         "kind": 6,
         "importPath": "tests.test_transform",
         "description": "tests.test_transform",
-        "peekOfCode": "class TestGetCustomerField:\n    def test_returns_trade_name(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)\n        result = _get_customer_field(lookup, 10001.0, \"Client Preferred Trade Name\")\n        assert result == \"Acetamide MEA 75%\"\n    def test_returns_status(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)\n        assert _get_customer_field(lookup, 10001.0, \"Status\") == \"Active\"\n    def test_missing_ref_returns_none(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)",
+        "peekOfCode": "class TestGetCustomerField:\n    def test_returns_trade_name(self, customer_basic):\n        lookup = build_customer_lookup_index(customer_basic)\n        result = get_customer_field_by_ref(lookup, 10001.0, \"Client Preferred Trade Name\")\n        assert result == \"Acetamide MEA 75%\"\n    def test_returns_status(self, customer_basic):\n        lookup = build_customer_lookup_index(customer_basic)\n        assert get_customer_field_by_ref(lookup, 10001.0, \"Status\") == \"Active\"\n    def test_missing_ref_returns_none(self, customer_basic):\n        lookup = build_customer_lookup_index(customer_basic)",
         "detail": "tests.test_transform",
         "documentation": {}
     },
@@ -697,15 +674,6 @@
         "documentation": {}
     },
     {
-        "label": "TestSupplierDistributor",
-        "kind": 6,
-        "importPath": "tests.test_transform",
-        "description": "tests.test_transform",
-        "peekOfCode": "class TestSupplierDistributor:\n    def test_equals_ref_number(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Supplier&Distributor\"].iloc[0] == \"10001\"\n    def test_populated_on_all_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"Supplier&Distributor\"].notna())\n    def test_max_30_chars(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [\"1\" * 40],",
-        "detail": "tests.test_transform",
-        "documentation": {}
-    },
-    {
         "label": "TestReferenceNumber",
         "kind": 6,
         "importPath": "tests.test_transform",
@@ -720,15 +688,6 @@
         "importPath": "tests.test_transform",
         "description": "tests.test_transform",
         "peekOfCode": "class TestInciName:\n    def test_inci_name_mapped(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"INCI Name\"].iloc[0] == \"Water\"\n    def test_inci_name_max_200_chars(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None],\n            \"INCI\": [\"A\" * 250],\n            \"INCI Comp\": [None], \"Incidental?\": [None], \"Impurity\": [None],",
-        "detail": "tests.test_transform",
-        "documentation": {}
-    },
-    {
-        "label": "TestCasInciIncidental",
-        "kind": 6,
-        "importPath": "tests.test_transform",
-        "description": "tests.test_transform",
-        "peekOfCode": "class TestCasInciIncidental:\n    def test_equals_ref_number(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"CAS INCI / Incidental\"].iloc[0] == \"10001\"\n    def test_populated_on_all_sub_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"CAS INCI / Incidental\"] == \"10005\")\n# ── Is Incidental? ───────────────────────────────────────────────────────────\nclass TestIsIncidental:\n    def test_no_when_none(self, extraction_single, customer_basic):",
         "detail": "tests.test_transform",
         "documentation": {}
     },
@@ -814,20 +773,11 @@
         "documentation": {}
     },
     {
-        "label": "TestCasFields",
-        "kind": 6,
-        "importPath": "tests.test_transform",
-        "description": "tests.test_transform",
-        "peekOfCode": "class TestCasFields:\n    def test_cas_impurity_equals_ref(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"CAS Impurity\"].iloc[0] == \"10001\"\n    def test_cas_allergen_equals_ref(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"CAS Allergen\"].iloc[0] == \"10001\"\n    def test_cas_impurity_all_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"CAS Impurity\"] == \"10005\")",
-        "detail": "tests.test_transform",
-        "documentation": {}
-    },
-    {
         "label": "TestForwardFillRefNumber",
         "kind": 6,
         "importPath": "tests.test_transform",
         "description": "tests.test_transform",
-        "peekOfCode": "class TestForwardFillRefNumber:\n    def test_sub_rows_inherit_parent_ref(self, extraction_no_ref, customer_empty):\n        df = transform(extraction_no_ref, customer_empty)\n        # Supplier&Distributor is always populated (unlike Reference Number column)\n        assert all(df[\"Supplier&Distributor\"] == \"10002\")\n    def test_ref_only_on_first_of_group(self, extraction_no_ref, customer_empty):\n        df = transform(extraction_no_ref, customer_empty)\n        assert df[\"Reference Number\"].iloc[0] == \"10002\"\n        assert isna(df[\"Reference Number\"].iloc[1])",
+        "peekOfCode": "class TestForwardFillRefNumber:\n    # def test_sub_rows_inherit_parent_ref(self, extraction_no_ref, customer_empty):\n    #     df = transform(extraction_no_ref, customer_empty)\n    #     # Supplier&Distributor is always populated (unlike Reference Number column)\n    #     assert all(df[\"Supplier&Distributor\"] == \"10002\")\n    def test_ref_only_on_first_of_group(self, extraction_no_ref, customer_empty):\n        df = transform(extraction_no_ref, customer_empty)\n        assert df[\"Reference Number\"].iloc[0] == \"10002\"\n        assert isna(df[\"Reference Number\"].iloc[1])",
         "detail": "tests.test_transform",
         "documentation": {}
     },
@@ -998,7 +948,7 @@
         "kind": 2,
         "importPath": "utils.helpers",
         "description": "utils.helpers",
-        "peekOfCode": "def clean_text(val, max_len=None):\n    \"\"\"Strip whitespace and optionally truncate.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    result = str(val).strip()\n    return result[:max_len] if max_len else result\ndef safe_ref(val):\n    \"\"\"Convert float reference numbers like 10001.0 -> '10001', truncate to 30 chars.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None",
+        "peekOfCode": "def clean_text(val, max_len=None):\n    \"\"\"Strip whitespace and optionally truncate.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    result = str(val).strip()\n    return result[:max_len] if max_len else result\ndef safe_ref(val):\n    \"\"\"Convert float-like reference numbers safely and truncate to 30 chars.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None",
         "detail": "utils.helpers",
         "documentation": {}
     },
@@ -1007,7 +957,7 @@
         "kind": 2,
         "importPath": "utils.helpers",
         "description": "utils.helpers",
-        "peekOfCode": "def safe_ref(val):\n    \"\"\"Convert float reference numbers like 10001.0 -> '10001', truncate to 30 chars.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    try:\n        result = str(int(float(val)))\n    except (TypeError, ValueError):\n        result = str(val).strip()\n    return result[:30]\ndef incidental_flag(val):",
+        "peekOfCode": "def safe_ref(val):\n    \"\"\"Convert float-like reference numbers safely and truncate to 30 chars.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    # If it's already a clean string of digits, don't touch it\n    if isinstance(val, str):\n        val = val.strip()\n        if val.isdigit():\n            return val[:30]\n    try:",
         "detail": "utils.helpers",
         "documentation": {}
     },
@@ -1124,7 +1074,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def run(\n    extraction_path=EXTRACTION_FILE,\n    customer_path=CUSTOMER_FILE,\n    output_path=OUTPUT_FILE,\n    include_validation: bool = False,\n):\n    print(\"── Extract ─────────────────────────────────────────\")\n    extraction, customer = load_data(extraction_path, customer_path)\n    print(f\"  Extraction rows : {len(extraction)}\")\n    print(f\"  Customer rows   : {len(customer)}\")",
+        "peekOfCode": "def run(\n    extraction_path=EXTRACTION_FILE,\n    customer_path=CUSTOMER_FILE,\n    output_path=OUTPUT_FILE,\n    include_validation: bool = False,\n):\n    print(\"── Extract ─────────────────────────────────────────\")\n    raw_extraction_data, customer_rm_list = load_data(extraction_path, customer_path)\n    print(f\"  Extraction rows : {len(raw_extraction_data)}\")\n    print(f\"  Customer rows   : {len(customer_rm_list)}\")",
         "detail": "main",
         "documentation": {}
     }

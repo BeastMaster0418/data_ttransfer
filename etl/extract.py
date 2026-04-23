@@ -14,6 +14,6 @@ def load_data(
     extraction : pd.DataFrame   (Extraction File – Sheet: Original)
     customer   : pd.DataFrame   (Customer Supplied RM List)
     """
-    extraction = pd.read_excel(extraction_path)
-    customer   = pd.read_excel(customer_path)
-    return extraction, customer
+    raw_extraction_data = pd.read_excel(extraction_path)
+    customer_rm_list   = pd.read_excel(customer_path)
+    return raw_extraction_data, customer_rm_list

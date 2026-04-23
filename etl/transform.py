@@ -18,7 +18,7 @@ from utils.parsers import (
 
 # ── Customer lookup ──────────────────────────────────────────────────────────
 
-def _build_customer_lookup(customer: pd.DataFrame) -> pd.DataFrame:
+def build_customer_lookup_index(customer: pd.DataFrame) -> pd.DataFrame:
     """
     Index customer data by the numeric suffix of Item ID.
     e.g. 'GFP-10001' -> key 10001.0
@@ -29,7 +29,7 @@ def _build_customer_lookup(customer: pd.DataFrame) -> pd.DataFrame:
     return df.dropna(subset=["_key"]).set_index("_key")
 
 
-def _get_customer_field(lookup: pd.DataFrame, ref_num, field: str):
+def get_customer_field_by_ref(lookup: pd.DataFrame, ref_num, field: str):
     """Look up a single field from the customer table by reference number."""
     try:
         key = float(ref_num)
@@ -44,7 +44,7 @@ def _get_customer_field(lookup: pd.DataFrame, ref_num, field: str):
 
 # ── Row builder ──────────────────────────────────────────────────────────────
 
-def _build_row(src_row: pd.Series, lookup: pd.DataFrame, is_first: bool) -> dict:
+def map_extraction_row_to_output(src_row: pd.Series, lookup: pd.DataFrame, is_first: bool) -> dict:
     """Map one Extraction File row to one output template row."""
     ref     = src_row["Reference Number"]
     ref_str = safe_ref(ref)
@@ -59,38 +59,63 @@ def _build_row(src_row: pd.Series, lookup: pd.DataFrame, is_first: bool) -> dict
 
     trade_name = (
         (
-            _get_customer_field(lookup, ref, "Client Preferred Trade Name")
+            get_customer_field_by_ref(lookup, ref, "Client Preferred Trade Name")
             or clean_text(src_row.get("Trade Name"), 255)
         )
         if is_first
         else None
     )
 
+    manufacturer = clean_text(src_row.get("Manufacturer"), 255)
+    supplier_distributer = None
+    reference_number = ref_str if is_first else None
+    inci_name = clean_text(src_row.get("INCI"), 200)
+    cas_inci_incidental = None
+    is_incidental = incidental_flag(src_row.get("Incidental?"))
+    inci_concentration = clamp_0_100(inci_exact)
+    inci_conc_min = clamp_0_100(inci_min)
+    inci_conc_max = clamp_0_100(inci_max)
+    inci_function = semi_colon_join(src_row.get("Function"), 255)
+    impurity_name = clean_text(src_row.get("Impurity"), 200)
+    cas_impurity = None
+    impurity_concentration = limit_decimals(imp_num)
+    impurity_concentration_type = imp_unit
+    allergen_name = clean_text(src_row.get("Allergens"), 200)
+    cas_allergen = None
+    allergen_concentration = clamp_0_100(alg_num)
+    rm_status = get_customer_field_by_ref(lookup, ref, "Status")
+    is_locked = "No"
+    price = None
+    price_from = None
+    price_to = None
+    description = clean_text(get_customer_field_by_ref(lookup, ref, "Additional Description"), 2000)
+
+
     return {
         "Trade Name":                             trade_name,
-        "Manufacturer":                           clean_text(src_row.get("Manufacturer"), 255),
-        "Supplier&Distributor":                   None,
-        "Reference Number":                       ref_str if is_first else None,
-        "INCI Name":                              clean_text(src_row.get("INCI"), 200),
-        "CAS INCI / Incidental":                  None,
-        "Is Incidental?":                         incidental_flag(src_row.get("Incidental?")),
-        "INCI Concentration":                     clamp_0_100(inci_exact),
-        "INCI Conc Min":                          clamp_0_100(inci_min),
-        "INCI Conc Max":                          clamp_0_100(inci_max),
-        "INCI Function":                          semi_colon_join(src_row.get("Function"), 255),
-        "Impurity Name":                          clean_text(src_row.get("Impurity"), 200),
-        "CAS Impurity":                           None,
-        "Impurity Concentration":                 limit_decimals(imp_num),
-        "Impurity Concentration type (% or PPM)": imp_unit,
-        "Allergen Name":                          clean_text(src_row.get("Allergens"), 200),
-        "CAS Allergen":                           None,
-        "Allergen Concentration":                 clamp_0_100(alg_num),
-        "RM Status":                              _get_customer_field(lookup, ref, "Status"),
-        "Is Locked":                              "No",
-        "Price":                                  None,
-        "Price: From":                            None,
-        "Price: To":                              None,
-        "Description":                            clean_text(src_row.get("Additional Description"), 2000),
+        "Manufacturer":                           manufacturer,
+        "Supplier&Distributor":                   supplier_distributer,
+        "Reference Number":                       reference_number,
+        "INCI Name":                              inci_name,
+        "CAS INCI / Incidental":                  cas_inci_incidental,
+        "Is Incidental?":                         is_incidental,
+        "INCI Concentration":                     inci_concentration,
+        "INCI Conc Min":                          inci_conc_min,
+        "INCI Conc Max":                          inci_conc_max,
+        "INCI Function":                          inci_function,
+        "Impurity Name":                          impurity_name,
+        "CAS Impurity":                           cas_impurity,
+        "Impurity Concentration":                 impurity_concentration,
+        "Impurity Concentration type (% or PPM)": impurity_concentration_type,
+        "Allergen Name":                          allergen_name,
+        "CAS Allergen":                           cas_allergen,
+        "Allergen Concentration":                 allergen_concentration,
+        "RM Status":                              rm_status,
+        "Is Locked":                              is_locked,
+        "Price":                                  price,
+        "Price: From":                            price_from,
+        "Price: To":                              price_to,
+        "Description":                            description,
     }
 
 
@@ -111,7 +136,7 @@ def transform(extraction: pd.DataFrame, customer: pd.DataFrame) -> pd.DataFrame:
     extraction["Reference Number"] = extraction["Reference Number"].ffill()
 
     # Step 2 – customer lookup
-    lookup = _build_customer_lookup(customer)
+    lookup = build_customer_lookup_index(customer)
 
     # Step 3 – build rows
     rows      = []
@@ -121,6 +146,6 @@ def transform(extraction: pd.DataFrame, customer: pd.DataFrame) -> pd.DataFrame:
         ref_str  = safe_ref(row["Reference Number"])
         is_first = ref_str != last_ref
         last_ref = ref_str
-        rows.append(_build_row(row, lookup, is_first))
+        rows.append(map_extraction_row_to_output(row, lookup, is_first))
 
     return pd.DataFrame(rows, columns=OUTPUT_COLUMNS)

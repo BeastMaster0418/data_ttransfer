@@ -22,13 +22,25 @@ def clean_text(val, max_len=None):
 
 
 def safe_ref(val):
-    """Convert float reference numbers like 10001.0 -> '10001', truncate to 30 chars."""
+    """Convert float-like reference numbers safely and truncate to 30 chars."""
     if val is None or (isinstance(val, float) and math.isnan(val)):
         return None
+
+    # If it's already a clean string of digits, don't touch it
+    if isinstance(val, str):
+        val = val.strip()
+        if val.isdigit():
+            return val[:30]
+
     try:
-        result = str(int(float(val)))
+        # Only use float conversion for actual numeric types
+        if isinstance(val, (int, float)):
+            result = str(int(val))
+        else:
+            result = str(int(float(val)))
     except (TypeError, ValueError):
         result = str(val).strip()
+
     return result[:30]
 
 
