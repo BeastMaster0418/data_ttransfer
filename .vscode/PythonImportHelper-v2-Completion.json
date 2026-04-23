@@ -9,6 +9,174 @@
         "documentation": {}
     },
     {
+        "label": "EXTRACTION_FILE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOMER_FILE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_COLUMNS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_COLUMNS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CONSTRAINTS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "clean_text",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "safe_ref",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "incidental_flag",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "semi_colon_join",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "clamp_0_100",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "limit_decimals",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "safe_float",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "NUMBER_RE",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "parse_inci_comp",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "isExtraImport": true,
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "extract_number_max",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "isExtraImport": true,
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "extract_impurity_unit",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "isExtraImport": true,
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "extract_allergen_max",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "isExtraImport": true,
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -27,225 +195,248 @@
         "documentation": {}
     },
     {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
+        "label": "sys",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "decimal",
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
-        "label": "InvalidOperation",
-        "importPath": "decimal",
-        "description": "decimal",
+        "label": "load_data",
+        "importPath": "etl.extract ",
+        "description": "etl.extract ",
         "isExtraImport": true,
-        "detail": "decimal",
+        "detail": "etl.extract ",
         "documentation": {}
     },
     {
-        "label": "ROUND_DOWN",
-        "importPath": "decimal",
-        "description": "decimal",
+        "label": "transform",
+        "importPath": "etl.transform",
+        "description": "etl.transform",
         "isExtraImport": true,
-        "detail": "decimal",
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "etl.validate ",
+        "description": "etl.validate ",
+        "isExtraImport": true,
+        "detail": "etl.validate ",
+        "documentation": {}
+    },
+    {
+        "label": "save_output",
+        "importPath": "etl.load     ",
+        "description": "etl.load     ",
+        "isExtraImport": true,
+        "detail": "etl.load     ",
+        "documentation": {}
+    },
+    {
+        "label": "EXTRACTION_FILE",
+        "importPath": "config       ",
+        "description": "config       ",
+        "isExtraImport": true,
+        "detail": "config       ",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOMER_FILE",
+        "importPath": "config       ",
+        "description": "config       ",
+        "isExtraImport": true,
+        "detail": "config       ",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "importPath": "config       ",
+        "description": "config       ",
+        "isExtraImport": true,
+        "detail": "config       ",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "etl.extract",
+        "description": "etl.extract",
+        "peekOfCode": "def load_data(\n    extraction_path=EXTRACTION_FILE,\n    customer_path=CUSTOMER_FILE,\n):\n    \"\"\"\n    Load raw source files.\n    Returns\n    -------\n    extraction : pd.DataFrame   (Extraction File – Sheet: Original)\n    customer   : pd.DataFrame   (Customer Supplied RM List)",
+        "detail": "etl.extract",
+        "documentation": {}
+    },
+    {
+        "label": "save_output",
+        "kind": 2,
+        "importPath": "etl.load",
+        "description": "etl.load",
+        "peekOfCode": "def save_output(\n    df: pd.DataFrame,\n    output_path=OUTPUT_FILE,\n    include_validation: bool = False,\n) -> Path:\n    \"\"\"\n    Write the transformed DataFrame to an Excel file.\n    Parameters\n    ----------\n    df                  : transformed (and optionally validated) DataFrame",
+        "detail": "etl.load",
+        "documentation": {}
+    },
+    {
+        "label": "transform",
+        "kind": 2,
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "peekOfCode": "def transform(extraction: pd.DataFrame, customer: pd.DataFrame) -> pd.DataFrame:\n    \"\"\"\n    Full transformation pipeline:\n      1. Forward-fill Reference Number (sub-rows inherit parent ref)\n      2. Build customer lookup index\n      3. Map every row to the output template schema\n      4. Deduplicate Trade Name / Reference Number within each group\n    Returns a DataFrame with OUTPUT_COLUMNS column order.\n    \"\"\"\n    # Step 1 – forward-fill reference numbers",
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 2,
+        "importPath": "etl.validate",
+        "description": "etl.validate",
+        "peekOfCode": "def validate(df: pd.DataFrame, constraints: dict = CONSTRAINTS) -> tuple[pd.DataFrame, list[dict]]:\n    \"\"\"\n    Validate every row of *df* against *constraints*.\n    Returns\n    -------\n    df     : original DataFrame with an added 'Validation' column ('OK' / 'ISSUE')\n    issues : list of dicts describing every violation found\n    \"\"\"\n    all_issues: list[dict] = []\n    for idx, row in df.iterrows():",
+        "detail": "etl.validate",
         "documentation": {}
     },
     {
         "label": "safe_float",
         "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def safe_float(s):\n    try:\n        v = float(s)\n        return v if math.isfinite(v) else None\n    except (ValueError, TypeError):\n        return None\ndef extract_number_max(val):\n    \"\"\"Extract the maximum numeric value from messy strings.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "extract_number_max",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def extract_number_max(val):\n    \"\"\"Extract the maximum numeric value from messy strings.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    s = str(val).strip()\n    # Remove leading operators / keywords\n    s = re.sub(r'(?i)^(max\\.?|nmt|<=?|>=?|~|˂|≤|≥|≦|≧)\\s*', '', s).strip()\n    # Remove trailing keywords\n    s = re.sub(r'(?i)\\s*(ppm|ppb|mg/kg|μg/kg|ug/kg|mg/l|%)\\s*(max\\.?|max)?\\s*$', '', s).strip()\n    s = re.sub(r'(?i)\\s*max\\.?\\s*$', '', s).strip()",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "extract_impurity_unit",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def extract_impurity_unit(val):\n    \"\"\"Return 'PPM' if ppm/ppb/mg/kg present, else '%'.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    s = str(val).upper()\n    if re.search(r'PPM|PPB|MG/KG|[UΜ]G/KG|MG/L', s):\n        return 'PPM'\n    return '%'\ndef parse_inci_comp(val):\n    \"\"\"Return (exact, min, max) rounded to 8 decimals.\"\"\"",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "parse_inci_comp",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def parse_inci_comp(val):\n    \"\"\"Return (exact, min, max) rounded to 8 decimals.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None, None, None\n    s = str(val).strip()\n    # Range\n    m = re.search(r'(\\d+\\.?\\d*)\\s*[-–]\\s*(\\d+\\.?\\d*)', s)\n    if m:\n        lo = safe_float(m.group(1))\n        hi = safe_float(m.group(2))",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "extract_allergen_max",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def extract_allergen_max(val):\n    \"\"\"Extract allergen concentration (0-100), taking max of range.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    s = str(val).strip()\n    # Strip known non-numeric units that disqualify value\n    if re.search(r'(?i)μg/kg|ug/kg|mg/kg|mg/l', s):\n        return None  # unit not compatible with 0-100 %\n    s = re.sub(r'(?i)(MAX\\.?|<=?|>=?|~|˂|≤|≥|<|>)\\s*', '', s).strip()\n    # Range",
-        "detail": "data",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def safe_float(s):\n    try:\n        v = float(s)\n        return v if math.isfinite(v) else None\n    except (ValueError, TypeError):\n        return None\ndef clean_text(val, max_len=None):\n    \"\"\"Strip whitespace and optionally truncate.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
         "label": "clean_text",
         "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def clean_text(val, max_len):\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    return str(val).strip()[:max_len]\ndef incidental_flag(val):\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return ''\n    return 'Y' if str(val).strip().upper() in ('Y', 'YES', '1', 'TRUE') else 'No'\ndef get_b_field(ref_num, field):\n    try:",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "incidental_flag",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def incidental_flag(val):\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return ''\n    return 'Y' if str(val).strip().upper() in ('Y', 'YES', '1', 'TRUE') else 'No'\ndef get_b_field(ref_num, field):\n    try:\n        key = float(ref_num)\n    except (TypeError, ValueError):\n        return None\n    if key not in b_lookup.index:",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "get_b_field",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def get_b_field(ref_num, field):\n    try:\n        key = float(ref_num)\n    except (TypeError, ValueError):\n        return None\n    if key not in b_lookup.index:\n        return None\n    row = b_lookup.loc[key]\n    val = row[field] if isinstance(row, pd.Series) else row[field].iloc[0]\n    return str(val).strip() if pd.notna(val) else None",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "semi_colon_join",
-        "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def semi_colon_join(val):\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    parts = re.split(r'[;,]', str(val))\n    result = '; '.join(p.strip() for p in parts if p.strip())\n    return result[:255]\ndef safe_ref(val):\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    try:",
-        "detail": "data",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def clean_text(val, max_len=None):\n    \"\"\"Strip whitespace and optionally truncate.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    result = str(val).strip()\n    return result[:max_len] if max_len else result\ndef safe_ref(val):\n    \"\"\"Convert float reference numbers like 10001.0 -> '10001', truncate to 30 chars.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
         "label": "safe_ref",
         "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def safe_ref(val):\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    try:\n        return str(int(float(val)))\n    except (TypeError, ValueError):\n        return str(val).strip()\ndef clean_numeric(value, min_val=None, max_val=None, max_decimals=8):\n    if value is None or value == '':\n        return None",
-        "detail": "data",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def safe_ref(val):\n    \"\"\"Convert float reference numbers like 10001.0 -> '10001', truncate to 30 chars.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    try:\n        result = str(int(float(val)))\n    except (TypeError, ValueError):\n        result = str(val).strip()\n    return result[:30]\ndef incidental_flag(val):",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
-        "label": "clean_numeric",
+        "label": "incidental_flag",
         "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def clean_numeric(value, min_val=None, max_val=None, max_decimals=8):\n    if value is None or value == '':\n        return None\n    try:\n        num = Decimal(str(value))\n    except InvalidOperation:\n        return None\n    # Apply range limits\n    if min_val is not None and num < Decimal(str(min_val)):\n        return None",
-        "detail": "data",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def incidental_flag(val):\n    \"\"\"Normalise Y/YES/1/TRUE -> 'Yes', anything else -> 'No'.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return \"No\"\n    return \"Yes\" if str(val).strip().upper() in (\"Y\", \"YES\", \"1\", \"TRUE\") else \"No\"\ndef semi_colon_join(val, max_len=255):\n    \"\"\"Split on commas/semicolons and rejoin as '; '-separated string.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    parts = re.split(r\"[;,]\", str(val))",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
-        "label": "get_null",
+        "label": "semi_colon_join",
         "kind": 2,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "def get_null():\n    return None\n# ── Build output rows ────────────────────────────────────────────────────────\nC_COLS = [\n    'Trade Name', 'Manufacturer', 'Supplier&Distributor', 'Reference Number',\n    'INCI Name', 'CAS INCI / Incidental', 'Is Incidental?', 'INCI Concentration',\n    'INCI Conc Min', 'INCI Conc Max', 'INCI Function', 'Impurity Name',\n    'CAS Impurity', 'Impurity Concentration', 'Impurity Concentration type (% or PPM)',\n    'Allergen Name', 'CAS Allergen', 'Allergen Concentration', 'RM Status',\n    'Is Locked', 'Price', 'Price: From', 'Price: To', 'Description'",
-        "detail": "data",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def semi_colon_join(val, max_len=255):\n    \"\"\"Split on commas/semicolons and rejoin as '; '-separated string.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    parts = re.split(r\"[;,]\", str(val))\n    result = \"; \".join(p.strip() for p in parts if p.strip())\n    return result[:max_len]\ndef clamp_0_100(val):\n    \"\"\"Return value only if within [0, 100], else None.\"\"\"\n    if val is None:",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
-        "label": "a_df",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "a_df = pd.read_excel('data/Extraction File.xlsx')\nb_df = pd.read_excel('data/Customer Supplied RM List.xlsx')\n# ── Build B lookup: numeric part of Item ID -> row ──────────────────────────\nb_df['_key'] = b_df['Item ID'].astype(str).str.extract(r'(\\d+)$')[0]\nb_df['_key'] = pd.to_numeric(b_df['_key'], errors='coerce')\nb_lookup = b_df.dropna(subset=['_key']).set_index('_key')\n# ── Forward-fill Reference Number within A ──────────────────────────────────\na_df['Reference Number'] = a_df['Reference Number'].ffill()\n# ── Helper functions ─────────────────────────────────────────────────────────\nNUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')",
-        "detail": "data",
+        "label": "clamp_0_100",
+        "kind": 2,
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def clamp_0_100(val):\n    \"\"\"Return value only if within [0, 100], else None.\"\"\"\n    if val is None:\n        return None\n    return round(val, 8) if 0 <= val <= 100 else None\ndef limit_decimals(val, decimals=8):\n    \"\"\"Round to given decimal places.\"\"\"\n    if val is None:\n        return None\n    return round(val, decimals)",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
-        "label": "b_df",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "b_df = pd.read_excel('data/Customer Supplied RM List.xlsx')\n# ── Build B lookup: numeric part of Item ID -> row ──────────────────────────\nb_df['_key'] = b_df['Item ID'].astype(str).str.extract(r'(\\d+)$')[0]\nb_df['_key'] = pd.to_numeric(b_df['_key'], errors='coerce')\nb_lookup = b_df.dropna(subset=['_key']).set_index('_key')\n# ── Forward-fill Reference Number within A ──────────────────────────────────\na_df['Reference Number'] = a_df['Reference Number'].ffill()\n# ── Helper functions ─────────────────────────────────────────────────────────\nNUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')\ndef safe_float(s):",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "b_df['_key']",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "b_df['_key'] = b_df['Item ID'].astype(str).str.extract(r'(\\d+)$')[0]\nb_df['_key'] = pd.to_numeric(b_df['_key'], errors='coerce')\nb_lookup = b_df.dropna(subset=['_key']).set_index('_key')\n# ── Forward-fill Reference Number within A ──────────────────────────────────\na_df['Reference Number'] = a_df['Reference Number'].ffill()\n# ── Helper functions ─────────────────────────────────────────────────────────\nNUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')\ndef safe_float(s):\n    try:\n        v = float(s)",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "b_df['_key']",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "b_df['_key'] = pd.to_numeric(b_df['_key'], errors='coerce')\nb_lookup = b_df.dropna(subset=['_key']).set_index('_key')\n# ── Forward-fill Reference Number within A ──────────────────────────────────\na_df['Reference Number'] = a_df['Reference Number'].ffill()\n# ── Helper functions ─────────────────────────────────────────────────────────\nNUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')\ndef safe_float(s):\n    try:\n        v = float(s)\n        return v if math.isfinite(v) else None",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "b_lookup",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "b_lookup = b_df.dropna(subset=['_key']).set_index('_key')\n# ── Forward-fill Reference Number within A ──────────────────────────────────\na_df['Reference Number'] = a_df['Reference Number'].ffill()\n# ── Helper functions ─────────────────────────────────────────────────────────\nNUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')\ndef safe_float(s):\n    try:\n        v = float(s)\n        return v if math.isfinite(v) else None\n    except (ValueError, TypeError):",
-        "detail": "data",
+        "label": "limit_decimals",
+        "kind": 2,
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def limit_decimals(val, decimals=8):\n    \"\"\"Round to given decimal places.\"\"\"\n    if val is None:\n        return None\n    return round(val, decimals)",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
         "label": "NUMBER_RE",
         "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "NUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')\ndef safe_float(s):\n    try:\n        v = float(s)\n        return v if math.isfinite(v) else None\n    except (ValueError, TypeError):\n        return None\ndef extract_number_max(val):\n    \"\"\"Extract the maximum numeric value from messy strings.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):",
-        "detail": "data",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "NUMBER_RE = re.compile(r'\\d+\\.?\\d*(?:[eE][+-]?\\d+)?')\ndef safe_float(s):\n    try:\n        v = float(s)\n        return v if math.isfinite(v) else None\n    except (ValueError, TypeError):\n        return None\ndef clean_text(val, max_len=None):\n    \"\"\"Strip whitespace and optionally truncate.\"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):",
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
-        "label": "C_COLS",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "C_COLS = [\n    'Trade Name', 'Manufacturer', 'Supplier&Distributor', 'Reference Number',\n    'INCI Name', 'CAS INCI / Incidental', 'Is Incidental?', 'INCI Concentration',\n    'INCI Conc Min', 'INCI Conc Max', 'INCI Function', 'Impurity Name',\n    'CAS Impurity', 'Impurity Concentration', 'Impurity Concentration type (% or PPM)',\n    'Allergen Name', 'CAS Allergen', 'Allergen Concentration', 'RM Status',\n    'Is Locked', 'Price', 'Price: From', 'Price: To', 'Description'\n]\nrows = []\nlast_ref = None",
-        "detail": "data",
+        "label": "extract_number_max",
+        "kind": 2,
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "peekOfCode": "def extract_number_max(val):\n    \"\"\"\n    Extract the maximum numeric value from messy concentration strings.\n    Handles: '< 3 ppm', 'max 1 ppm', '4 - 6', '51 - 59', numeric literals, etc.\n    For ranges, returns the upper bound.\n    \"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    s = str(val).strip()\n    # Remove leading operators / keywords",
+        "detail": "utils.parsers",
         "documentation": {}
     },
     {
-        "label": "rows",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "rows = []\nlast_ref = None\nfor _, row in a_df.iterrows():\n    ref      = row['Reference Number']\n    ref_str  = safe_ref(ref)\n    inci_exact, inci_min, inci_max = parse_inci_comp(row.get('INCI Comp'))\n    imp_raw  = row.get('Impurity Comp')\n    imp_num  = extract_number_max(imp_raw)\n    imp_unit = extract_impurity_unit(imp_raw) if pd.notna(imp_raw) else None\n    alg_num  = extract_allergen_max(row.get('Allergen Comp'))",
-        "detail": "data",
+        "label": "extract_impurity_unit",
+        "kind": 2,
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "peekOfCode": "def extract_impurity_unit(val):\n    \"\"\"\n    Classify impurity concentration unit.\n    Returns 'PPM' if ppm / ppb / mg/kg / μg/kg / mg/L detected, else '%'.\n    \"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    s = str(val).upper()\n    if re.search(r\"PPM|PPB|MG/KG|[UΜ]G/KG|MG/L\", s):\n        return \"PPM\"",
+        "detail": "utils.parsers",
         "documentation": {}
     },
     {
-        "label": "last_ref",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "last_ref = None\nfor _, row in a_df.iterrows():\n    ref      = row['Reference Number']\n    ref_str  = safe_ref(ref)\n    inci_exact, inci_min, inci_max = parse_inci_comp(row.get('INCI Comp'))\n    imp_raw  = row.get('Impurity Comp')\n    imp_num  = extract_number_max(imp_raw)\n    imp_unit = extract_impurity_unit(imp_raw) if pd.notna(imp_raw) else None\n    alg_num  = extract_allergen_max(row.get('Allergen Comp'))\n    is_first = (ref_str != last_ref)",
-        "detail": "data",
+        "label": "parse_inci_comp",
+        "kind": 2,
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "peekOfCode": "def parse_inci_comp(val):\n    \"\"\"\n    Parse INCI composition into (exact, min, max).\n    - 'X - Y'   -> (None, X, Y)\n    - '< X'     -> (None, None, X)\n    - '> X'     -> (None, X, None)\n    - 'X'       -> (X,    None, None)\n    All values rounded to 8 decimal places.\n    \"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):",
+        "detail": "utils.parsers",
         "documentation": {}
     },
     {
-        "label": "out_df",
+        "label": "extract_allergen_max",
+        "kind": 2,
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "peekOfCode": "def extract_allergen_max(val):\n    \"\"\"\n    Extract allergen concentration (0–100 %), taking the upper bound of ranges.\n    Returns None for values expressed in incompatible units (μg/kg, mg/kg, mg/L).\n    \"\"\"\n    if val is None or (isinstance(val, float) and math.isnan(val)):\n        return None\n    s = str(val).strip()\n    # Incompatible units → skip\n    if re.search(r\"(?i)μg/kg|ug/kg|mg/kg|mg/l\", s):",
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "EXTRACTION_FILE",
         "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "out_df = pd.DataFrame(rows, columns=C_COLS)\nprint(f\"Output rows: {len(out_df)}\")\nprint(out_df.head(15).to_string())\nout_df.to_excel('Raw Materials Template (Hiring).xlsx', index=False)\nprint(\"\\nSaved successfully.\")",
-        "detail": "data",
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "EXTRACTION_FILE = RAW_DIR / \"Extraction File.xlsx\"\nCUSTOMER_FILE   = RAW_DIR / \"Customer Supplied RM List.xlsx\"\nOUTPUT_FILE     = PROCESSED_DIR / \"Raw Materials Template(Hiring).xlsx\"\n# ── Output column order ──────────────────────────────────────────────────────\nOUTPUT_COLUMNS = [\n    \"Trade Name\",\n    \"Manufacturer\",\n    \"Supplier&Distributor\",\n    \"Reference Number\",\n    \"INCI Name\",",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_COLUMNS",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OUTPUT_COLUMNS = [\n    \"Trade Name\",\n    \"Manufacturer\",\n    \"Supplier&Distributor\",\n    \"Reference Number\",\n    \"INCI Name\",\n    \"CAS INCI / Incidental\",\n    \"Is Incidental?\",\n    \"INCI Concentration\",\n    \"INCI Conc Min\",",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CONSTRAINTS",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "CONSTRAINTS = {\n    \"Reference Number\":          {\"max_chars\": 30},\n    \"INCI Concentration\":        {\"min\": 0, \"max\": 100, \"decimals\": 8},\n    \"INCI Conc Min\":             {\"min\": 0, \"max\": 100, \"decimals\": 8},\n    \"INCI Conc Max\":             {\"min\": 0, \"max\": 100, \"decimals\": 8},\n    \"Impurity Concentration\":    {\"decimals\": 8},\n    \"Allergen Concentration\":    {\"min\": 0, \"max\": 100, \"decimals\": 8},\n    \"INCI Name\":                 {\"max_chars\": 200},\n    \"Impurity Name\":             {\"max_chars\": 200},\n    \"Allergen Name\":             {\"max_chars\": 200},",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def run(\n    extraction_path=EXTRACTION_FILE,\n    customer_path=CUSTOMER_FILE,\n    output_path=OUTPUT_FILE,\n    include_validation: bool = False,\n):\n    print(\"── Extract ─────────────────────────────────────────\")\n    extraction, customer = load_data(extraction_path, customer_path)\n    print(f\"  Extraction rows : {len(extraction)}\")\n    print(f\"  Customer rows   : {len(customer)}\")",
+        "detail": "main",
         "documentation": {}
     }
 ]
