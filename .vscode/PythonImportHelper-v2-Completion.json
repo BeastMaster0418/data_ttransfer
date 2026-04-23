@@ -9,11 +9,20 @@
         "documentation": {}
     },
     {
+        "label": "read_excel_file",
+        "kind": 2,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "def read_excel_file(file_path):\n    try:\n        # Read all sheets into a dictionaryd\n        all_sheets = pd.read_excel(file_path, sheet_name=None)\n        # Store and print each sheet\n        data = {}\n        for sheet_name, df in all_sheets.items():\n            data[sheet_name] = df\n            Products = df.to_dict(orient = \"records\")\n            print(f\"\\n{'='*60}\")",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
         "label": "file_path_1",
         "kind": 5,
         "importPath": "data",
         "description": "data",
-        "peekOfCode": "file_path_1 = \"Extraction File.xlsx\"\nfile_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionaryd\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")",
+        "peekOfCode": "file_path_1 = \"Extraction File.xlsx\"\nfile_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\ndef read_excel_file(file_path):\n    try:\n        # Read all sheets into a dictionaryd\n        all_sheets = pd.read_excel(file_path, sheet_name=None)\n        # Store and print each sheet\n        data = {}\n        for sheet_name, df in all_sheets.items():",
         "detail": "data",
         "documentation": {}
     },
@@ -22,7 +31,7 @@
         "kind": 5,
         "importPath": "data",
         "description": "data",
-        "peekOfCode": "file_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionaryd\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")",
+        "peekOfCode": "file_path_2 = \"Customer Supplied RM List.xlsx\"\nfile_path_3 = \"Raw Materials Template (Hiring).xlsx\"\ndef read_excel_file(file_path):\n    try:\n        # Read all sheets into a dictionaryd\n        all_sheets = pd.read_excel(file_path, sheet_name=None)\n        # Store and print each sheet\n        data = {}\n        for sheet_name, df in all_sheets.items():\n            data[sheet_name] = df",
         "detail": "data",
         "documentation": {}
     },
@@ -31,25 +40,7 @@
         "kind": 5,
         "importPath": "data",
         "description": "data",
-        "peekOfCode": "file_path_3 = \"Raw Materials Template (Hiring).xlsx\"\n# Read all sheets into a dictionaryd\nall_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "all_sheets",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "all_sheets = pd.read_excel(file_path_1, sheet_name=None)\n# Store and print each sheet\ndata = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")\n    print('='*60)\n    # print(df.to_string(index=True))",
-        "detail": "data",
-        "documentation": {}
-    },
-    {
-        "label": "data",
-        "kind": 5,
-        "importPath": "data",
-        "description": "data",
-        "peekOfCode": "data = {}\nfor sheet_name, df in all_sheets.items():\n    data[sheet_name] = df\n    Products = df.to_dict(orient = \"records\")\n    print(f\"\\n{'='*60}\")\n    print(f\"Sheet: {sheet_name}  |  Rows: {df.shape[0]}  |  Columns: {df.shape[1]}\")\n    print('='*60)\n    # print(df.to_string(index=True))\n    for i, product in enumerate(Products):\n        print(f\"Products[{i}] = {product}\")",
+        "peekOfCode": "file_path_3 = \"Raw Materials Template (Hiring).xlsx\"\ndef read_excel_file(file_path):\n    try:\n        # Read all sheets into a dictionaryd\n        all_sheets = pd.read_excel(file_path, sheet_name=None)\n        # Store and print each sheet\n        data = {}\n        for sheet_name, df in all_sheets.items():\n            data[sheet_name] = df\n            Products = df.to_dict(orient = \"records\")",
         "detail": "data",
         "documentation": {}
     }
