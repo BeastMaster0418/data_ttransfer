@@ -9,6 +9,14 @@
         "documentation": {}
     },
     {
+        "label": "isna",
+        "importPath": "pandas",
+        "description": "pandas",
+        "isExtraImport": true,
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
         "label": "EXTRACTION_FILE",
         "importPath": "config",
         "description": "config",
@@ -57,6 +65,30 @@
         "documentation": {}
     },
     {
+        "label": "EXTRACTION_FILE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOMER_FILE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -78,6 +110,70 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "clean_text",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "safe_ref",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "incidental_flag",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "semi_colon_join",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "clamp_0_100",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "limit_decimals",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "safe_float",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
         "documentation": {}
     },
     {
@@ -177,21 +273,35 @@
         "documentation": {}
     },
     {
-        "label": "re",
-        "kind": 6,
+        "label": "extract_number_max",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "detail": "utils.parsers",
         "documentation": {}
     },
     {
-        "label": "math",
-        "kind": 6,
+        "label": "extract_impurity_unit",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
         "isExtraImport": true,
-        "importPath": "math",
-        "description": "math",
-        "detail": "math",
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "parse_inci_comp",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "isExtraImport": true,
+        "detail": "utils.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "extract_allergen_max",
+        "importPath": "utils.parsers",
+        "description": "utils.parsers",
+        "isExtraImport": true,
+        "detail": "utils.parsers",
         "documentation": {}
     },
     {
@@ -204,11 +314,29 @@
         "documentation": {}
     },
     {
-        "label": "load_data",
-        "importPath": "etl.extract ",
-        "description": "etl.extract ",
+        "label": "pytest",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "etl.extract ",
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "importPath": "etl.extract",
+        "description": "etl.extract",
+        "isExtraImport": true,
+        "detail": "etl.extract",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
         "documentation": {}
     },
     {
@@ -217,6 +345,63 @@
         "description": "etl.transform",
         "isExtraImport": true,
         "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "_build_customer_lookup",
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "isExtraImport": true,
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "_get_customer_field",
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "isExtraImport": true,
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "transform",
+        "importPath": "etl.transform",
+        "description": "etl.transform",
+        "isExtraImport": true,
+        "detail": "etl.transform",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "etl.validate",
+        "description": "etl.validate",
+        "isExtraImport": true,
+        "detail": "etl.validate",
+        "documentation": {}
+    },
+    {
+        "label": "_check_row",
+        "importPath": "etl.validate",
+        "description": "etl.validate",
+        "isExtraImport": true,
+        "detail": "etl.validate",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "importPath": "etl.extract ",
+        "description": "etl.extract ",
+        "isExtraImport": true,
+        "detail": "etl.extract ",
         "documentation": {}
     },
     {
@@ -293,6 +478,510 @@
         "description": "etl.validate",
         "peekOfCode": "def validate(df: pd.DataFrame, constraints: dict = CONSTRAINTS) -> tuple[pd.DataFrame, list[dict]]:\n    \"\"\"\n    Validate every row of *df* against *constraints*.\n    Returns\n    -------\n    df     : original DataFrame with an added 'Validation' column ('OK' / 'ISSUE')\n    issues : list of dicts describing every violation found\n    \"\"\"\n    all_issues: list[dict] = []\n    for idx, row in df.iterrows():",
         "detail": "etl.validate",
+        "documentation": {}
+    },
+    {
+        "label": "extraction_single",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def extraction_single():\n    \"\"\"One product row with full data.\"\"\"\n    return pd.DataFrame({\n        \"Reference Number\": [10001.0],\n        \"Trade Name\":       [\"Product Alpha\"],\n        \"Manufacturer\":     [\"ACME Corp\"],\n        \"INCI\":             [\"Water\"],\n        \"INCI Comp\":        [100],\n        \"Incidental?\":      [None],\n        \"Impurity\":         [\"Lead\"],",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "extraction_multi_row",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def extraction_multi_row():\n    \"\"\"Parent row + two sub-rows sharing the same reference number.\"\"\"\n    return pd.DataFrame({\n        \"Reference Number\": [10005.0,         None,             None],\n        \"Trade Name\":       [\"SOLAGUM AX\",     None,             None],\n        \"Manufacturer\":     [\"Seppic\",          None,             None],\n        \"INCI\":             [\"Acacia Senegal\",  \"Xanthan Gum\",   None],\n        \"INCI Comp\":        [\"51 - 59\",         \"41 - 49\",       None],\n        \"Incidental?\":      [None,              None,            None],\n        \"Impurity\":         [None,              \"Water\",         \"Lead\"],",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "extraction_no_ref",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def extraction_no_ref():\n    \"\"\"Row where reference number is missing and must be forward-filled.\"\"\"\n    return pd.DataFrame({\n        \"Reference Number\": [10002.0, None,    None],\n        \"Trade Name\":       [\"Prod B\", None,    None],\n        \"Manufacturer\":     [\"Corp X\", None,    None],\n        \"INCI\":             [\"Glycerin\", \"Aqua\", None],\n        \"INCI Comp\":        [80,          20,    None],\n        \"Incidental?\":      [None,        None,  None],\n        \"Impurity\":         [None,        None,  None],",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "customer_basic",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def customer_basic():\n    \"\"\"Matching customer lookup row.\"\"\"\n    return pd.DataFrame({\n        \"Item ID\": [\"GFP-10001\"],\n        \"Client Preferred Trade Name\": [\"Acetamide MEA 75%\"],\n        \"Status\": [\"Active\"],\n        \"Additional Description\": [None],\n        \"Average Cost\": [0.0],\n        \"Last Cost\": [0.0],\n        \"Qty On Hand\": [0.0],",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "customer_multi",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def customer_multi():\n    \"\"\"Multiple customer rows for different reference numbers.\"\"\"\n    return pd.DataFrame({\n        \"Item ID\": [\"GFP-10001\", \"GFP-10002\", \"GFP-10005\"],\n        \"Client Preferred Trade Name\": [\"Trade Alpha\", \"Trade Beta\", \"Trade Gamma\"],\n        \"Status\": [\"Active\", \"Inactive\", \"Active\"],\n        \"Additional Description\": [None, None, None],\n        \"Average Cost\": [0.0, 0.0, 0.0],\n        \"Last Cost\": [0.0, 0.0, 0.0],\n        \"Qty On Hand\": [0.0, 0.0, 0.0],",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "customer_empty",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def customer_empty():\n    \"\"\"Customer table with no rows.\"\"\"\n    return pd.DataFrame({\n        \"Item ID\": pd.Series([], dtype=str),\n        \"Client Preferred Trade Name\": pd.Series([], dtype=str),\n        \"Status\": pd.Series([], dtype=str),\n        \"Additional Description\": pd.Series([], dtype=str),\n        \"Average Cost\": pd.Series([], dtype=float),\n        \"Last Cost\": pd.Series([], dtype=float),\n        \"Qty On Hand\": pd.Series([], dtype=float),",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "TestLoadDataIntegration",
+        "kind": 6,
+        "importPath": "tests.test_extract",
+        "description": "tests.test_extract",
+        "peekOfCode": "class TestLoadDataIntegration:\n    def test_returns_two_dataframes(self):\n        extraction, customer = load_data()\n        assert isinstance(extraction, pd.DataFrame)\n        assert isinstance(customer, pd.DataFrame)\n    def test_extraction_has_expected_columns(self):\n        extraction, _ = load_data()\n        expected = {\n            \"Reference Number\", \"Trade Name\", \"Manufacturer\",\n            \"INCI\", \"INCI Comp\", \"Incidental?\",",
+        "detail": "tests.test_extract",
+        "documentation": {}
+    },
+    {
+        "label": "TestLoadDataCustomPaths",
+        "kind": 6,
+        "importPath": "tests.test_extract",
+        "description": "tests.test_extract",
+        "peekOfCode": "class TestLoadDataCustomPaths:\n    def test_explicit_paths_work(self):\n        extraction, customer = load_data(\n            extraction_path=EXTRACTION_FILE,\n            customer_path=CUSTOMER_FILE,\n        )\n        assert len(extraction) > 0\n        assert len(customer) > 0\n    def test_missing_file_raises(self, tmp_path):\n        with pytest.raises(Exception):",
+        "detail": "tests.test_extract",
+        "documentation": {}
+    },
+    {
+        "label": "TestSafeFloat",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestSafeFloat:\n    def test_integer_string(self):\n        assert safe_float(\"42\") == 42.0\n    def test_float_string(self):\n        assert safe_float(\"3.14\") == 3.14\n    def test_numeric_int(self):\n        assert safe_float(10) == 10.0\n    def test_numeric_float(self):\n        assert safe_float(0.5) == 0.5\n    def test_none_returns_none(self):",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestCleanText",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestCleanText:\n    def test_strips_whitespace(self):\n        assert clean_text(\"  hello  \") == \"hello\"\n    def test_truncates_to_max_len(self):\n        assert clean_text(\"abcdef\", max_len=3) == \"abc\"\n    def test_no_truncation_when_no_max(self):\n        assert clean_text(\"abcdef\") == \"abcdef\"\n    def test_none_returns_none(self):\n        assert clean_text(None) is None\n    def test_nan_returns_none(self):",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestSafeRef",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestSafeRef:\n    def test_float_to_int_string(self):\n        assert safe_ref(10001.0) == \"10001\"\n    def test_integer(self):\n        assert safe_ref(10002) == \"10002\"\n    def test_string_numeric(self):\n        assert safe_ref(\"10003\") == \"10003\"\n    def test_none_returns_none(self):\n        assert safe_ref(None) is None\n    def test_nan_returns_none(self):",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestIncidentalFlag",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestIncidentalFlag:\n    def test_y_uppercase(self):\n        assert incidental_flag(\"Y\") == \"Yes\"\n    def test_y_lowercase(self):\n        assert incidental_flag(\"y\") == \"Yes\"\n    def test_yes_string(self):\n        assert incidental_flag(\"YES\") == \"Yes\"\n    def test_yes_mixed_case(self):\n        assert incidental_flag(\"Yes\") == \"Yes\"\n    def test_one_string(self):",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestSemiColonJoin",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestSemiColonJoin:\n    def test_single_value(self):\n        assert semi_colon_join(\"Solvent\") == \"Solvent\"\n    def test_comma_separated(self):\n        assert semi_colon_join(\"Solvent, Emulsifier\") == \"Solvent; Emulsifier\"\n    def test_semicolon_separated(self):\n        assert semi_colon_join(\"Solvent; Emulsifier\") == \"Solvent; Emulsifier\"\n    def test_mixed_separators(self):\n        result = semi_colon_join(\"Solvent, Emulsifier; Thickener\")\n        assert result == \"Solvent; Emulsifier; Thickener\"",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestClamp0100",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestClamp0100:\n    def test_zero_boundary(self):\n        assert clamp_0_100(0) == 0.0\n    def test_hundred_boundary(self):\n        assert clamp_0_100(100) == 100.0\n    def test_midrange_value(self):\n        assert clamp_0_100(50.0) == 50.0\n    def test_above_100_returns_none(self):\n        assert clamp_0_100(100.1) is None\n    def test_negative_returns_none(self):",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestLimitDecimals",
+        "kind": 6,
+        "importPath": "tests.test_helpers",
+        "description": "tests.test_helpers",
+        "peekOfCode": "class TestLimitDecimals:\n    def test_rounds_to_8(self):\n        assert limit_decimals(1.123456789) == round(1.123456789, 8)\n    def test_none_returns_none(self):\n        assert limit_decimals(None) is None\n    def test_integer_value(self):\n        assert limit_decimals(5) == 5.0\n    def test_zero(self):\n        assert limit_decimals(0) == 0.0\n    def test_custom_decimals(self):",
+        "detail": "tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestExtractNumberMax",
+        "kind": 6,
+        "importPath": "tests.test_parsers",
+        "description": "tests.test_parsers",
+        "peekOfCode": "class TestExtractNumberMax:\n    # Plain numeric\n    def test_plain_integer(self):\n        assert extract_number_max(100) == 100.0\n    def test_plain_float(self):\n        assert extract_number_max(3.5) == 3.5\n    def test_plain_string_number(self):\n        assert extract_number_max(\"25\") == 25.0\n    # Less-than prefix\n    def test_less_than(self):",
+        "detail": "tests.test_parsers",
+        "documentation": {}
+    },
+    {
+        "label": "TestExtractImpurityUnit",
+        "kind": 6,
+        "importPath": "tests.test_parsers",
+        "description": "tests.test_parsers",
+        "peekOfCode": "class TestExtractImpurityUnit:\n    def test_ppm_lowercase(self):\n        assert extract_impurity_unit(\"< 3 ppm\") == \"PPM\"\n    def test_ppm_uppercase(self):\n        assert extract_impurity_unit(\"< 3 PPM\") == \"PPM\"\n    def test_ppb(self):\n        assert extract_impurity_unit(\"< 10 ppb\") == \"PPM\"\n    def test_mg_kg(self):\n        assert extract_impurity_unit(\"< 5 mg/kg\") == \"PPM\"\n    def test_ug_kg(self):",
+        "detail": "tests.test_parsers",
+        "documentation": {}
+    },
+    {
+        "label": "TestParseInciComp",
+        "kind": 6,
+        "importPath": "tests.test_parsers",
+        "description": "tests.test_parsers",
+        "peekOfCode": "class TestParseInciComp:\n    # Exact values\n    def test_exact_integer(self):\n        exact, lo, hi = parse_inci_comp(100)\n        assert exact == 100.0\n        assert lo is None\n        assert hi is None\n    def test_exact_string_int(self):\n        exact, lo, hi = parse_inci_comp(\"100\")\n        assert exact == 100.0",
+        "detail": "tests.test_parsers",
+        "documentation": {}
+    },
+    {
+        "label": "TestExtractAllergenMax",
+        "kind": 6,
+        "importPath": "tests.test_parsers",
+        "description": "tests.test_parsers",
+        "peekOfCode": "class TestExtractAllergenMax:\n    # Plain numbers\n    def test_plain_float(self):\n        assert extract_allergen_max(0.5) == 0.5\n    def test_plain_integer(self):\n        assert extract_allergen_max(49) == 49.0\n    def test_plain_string(self):\n        assert extract_allergen_max(\"3.5\") == 3.5\n    # Range → upper bound\n    def test_range_returns_max(self):",
+        "detail": "tests.test_parsers",
+        "documentation": {}
+    },
+    {
+        "label": "TestBuildCustomerLookup",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestBuildCustomerLookup:\n    def test_indexes_by_numeric_suffix(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)\n        assert 10001.0 in lookup.index\n    def test_multiple_rows(self, customer_multi):\n        lookup = _build_customer_lookup(customer_multi)\n        assert 10001.0 in lookup.index\n        assert 10002.0 in lookup.index\n        assert 10005.0 in lookup.index\n    def test_empty_customer(self, customer_empty):",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestGetCustomerField",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestGetCustomerField:\n    def test_returns_trade_name(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)\n        result = _get_customer_field(lookup, 10001.0, \"Client Preferred Trade Name\")\n        assert result == \"Acetamide MEA 75%\"\n    def test_returns_status(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)\n        assert _get_customer_field(lookup, 10001.0, \"Status\") == \"Active\"\n    def test_missing_ref_returns_none(self, customer_basic):\n        lookup = _build_customer_lookup(customer_basic)",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestTransformOutputShape",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestTransformOutputShape:\n    def test_row_count_preserved(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert len(df) == 1\n    def test_multi_row_count_preserved(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert len(df) == 3\n    def test_all_output_columns_present(self, extraction_single, customer_basic):\n        from config import OUTPUT_COLUMNS\n        df = transform(extraction_single, customer_basic)",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestTradeName",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestTradeName:\n    def test_uses_customer_trade_name(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Trade Name\"].iloc[0] == \"Acetamide MEA 75%\"\n    def test_falls_back_to_extraction_trade_name(self, extraction_single, customer_empty):\n        df = transform(extraction_single, customer_empty)\n        assert df[\"Trade Name\"].iloc[0] == \"Product Alpha\"\n    def test_trade_name_blank_on_sub_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert df[\"Trade Name\"].iloc[0] == \"Trade Gamma\"   # first row → populated",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestManufacturer",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestManufacturer:\n    def test_manufacturer_mapped(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Manufacturer\"].iloc[0] == \"ACME Corp\"\n    def test_manufacturer_none_when_missing(self, customer_basic):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None], \"INCI\": [None],\n            \"INCI Comp\": [None], \"Incidental?\": [None], \"Impurity\": [None],\n            \"Impurity Comp\": [None], \"Allergens\": [None], \"Allergen Comp\": [None],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestSupplierDistributor",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestSupplierDistributor:\n    def test_equals_ref_number(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Supplier&Distributor\"].iloc[0] == \"10001\"\n    def test_populated_on_all_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"Supplier&Distributor\"].notna())\n    def test_max_30_chars(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [\"1\" * 40],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestReferenceNumber",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestReferenceNumber:\n    def test_present_on_first_row(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Reference Number\"].iloc[0] == \"10001\"\n    def test_blank_on_sub_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert df[\"Reference Number\"].iloc[0] == \"10005\"\n        assert isna(df[\"Reference Number\"].iloc[1])\n        assert isna(df[\"Reference Number\"].iloc[2])\n    def test_max_30_chars(self, customer_empty):",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciName",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestInciName:\n    def test_inci_name_mapped(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"INCI Name\"].iloc[0] == \"Water\"\n    def test_inci_name_max_200_chars(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None],\n            \"INCI\": [\"A\" * 250],\n            \"INCI Comp\": [None], \"Incidental?\": [None], \"Impurity\": [None],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestCasInciIncidental",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestCasInciIncidental:\n    def test_equals_ref_number(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"CAS INCI / Incidental\"].iloc[0] == \"10001\"\n    def test_populated_on_all_sub_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"CAS INCI / Incidental\"] == \"10005\")\n# ── Is Incidental? ───────────────────────────────────────────────────────────\nclass TestIsIncidental:\n    def test_no_when_none(self, extraction_single, customer_basic):",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestIsIncidental",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestIsIncidental:\n    def test_no_when_none(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Is Incidental?\"].iloc[0] == \"No\"\n    def test_yes_when_y(self, customer_basic):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None], \"INCI\": [None],\n            \"INCI Comp\": [None], \"Incidental?\": [\"Y\"], \"Impurity\": [None],\n            \"Impurity Comp\": [None], \"Allergens\": [None], \"Allergen Comp\": [None],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciConcentration",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestInciConcentration:\n    def test_exact_100(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"INCI Concentration\"].iloc[0] == 100.0\n    def test_range_populates_min_max(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert df[\"INCI Conc Min\"].iloc[0] == 51.0\n        assert df[\"INCI Conc Max\"].iloc[0] == 59.0\n        assert isna(df[\"INCI Concentration\"].iloc[0])\n    def test_out_of_range_clamped_to_none(self, customer_empty):",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciFunction",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestInciFunction:\n    def test_single_function(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"INCI Function\"].iloc[0] == \"Solvent\"\n    def test_multi_function_semicolon(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None], \"INCI\": [None],\n            \"INCI Comp\": [None], \"Incidental?\": [None], \"Impurity\": [None],\n            \"Impurity Comp\": [None], \"Allergens\": [None], \"Allergen Comp\": [None],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestImpurityName",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestImpurityName:\n    def test_impurity_name_mapped(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Impurity Name\"].iloc[0] == \"Lead\"\n    def test_impurity_max_200_chars(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None], \"INCI\": [None],\n            \"INCI Comp\": [None], \"Incidental?\": [None],\n            \"Impurity\": [\"Z\" * 250],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestImpurityConcentration",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestImpurityConcentration:\n    def test_ppm_extracted(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Impurity Concentration\"].iloc[0] == 3.0\n        assert df[\"Impurity Concentration type (% or PPM)\"].iloc[0] == \"PPM\"\n    def test_percent_unit(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],\n            \"Trade Name\": [\"X\"], \"Manufacturer\": [None], \"INCI\": [None],\n            \"INCI Comp\": [None], \"Incidental?\": [None], \"Impurity\": [\"Ethanol\"],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestAllergenConcentration",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestAllergenConcentration:\n    def test_allergen_name_mapped(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Allergen Name\"].iloc[0] == \"Limonene\"\n    def test_allergen_concentration(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Allergen Concentration\"].iloc[0] == 0.5\n    def test_allergen_range_takes_max(self, customer_empty):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10001.0],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestRmStatus",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestRmStatus:\n    def test_active_from_customer(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"RM Status\"].iloc[0] == \"Active\"\n    def test_none_when_not_in_customer(self, extraction_single, customer_empty):\n        df = transform(extraction_single, customer_empty)\n        assert isna(df[\"RM Status\"].iloc[0])\n    def test_inactive_status(self, customer_multi):\n        extraction = pd.DataFrame({\n            \"Reference Number\": [10002.0],",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestIsLocked",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestIsLocked:\n    def test_always_no(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"Is Locked\"].iloc[0] == \"No\"\n    def test_always_no_multi_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"Is Locked\"] == \"No\")\n# ── Price fields ─────────────────────────────────────────────────────────────\nclass TestPriceFields:\n    def test_price_none(self, extraction_single, customer_basic):",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestPriceFields",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestPriceFields:\n    def test_price_none(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert isna(df[\"Price\"].iloc[0])\n    def test_price_from_none(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert isna(df[\"Price: From\"].iloc[0])\n    def test_price_to_none(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert isna(df[\"Price: To\"].iloc[0])",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestCasFields",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestCasFields:\n    def test_cas_impurity_equals_ref(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"CAS Impurity\"].iloc[0] == \"10001\"\n    def test_cas_allergen_equals_ref(self, extraction_single, customer_basic):\n        df = transform(extraction_single, customer_basic)\n        assert df[\"CAS Allergen\"].iloc[0] == \"10001\"\n    def test_cas_impurity_all_rows(self, extraction_multi_row, customer_multi):\n        df = transform(extraction_multi_row, customer_multi)\n        assert all(df[\"CAS Impurity\"] == \"10005\")",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestForwardFillRefNumber",
+        "kind": 6,
+        "importPath": "tests.test_transform",
+        "description": "tests.test_transform",
+        "peekOfCode": "class TestForwardFillRefNumber:\n    def test_sub_rows_inherit_parent_ref(self, extraction_no_ref, customer_empty):\n        df = transform(extraction_no_ref, customer_empty)\n        # Supplier&Distributor is always populated (unlike Reference Number column)\n        assert all(df[\"Supplier&Distributor\"] == \"10002\")\n    def test_ref_only_on_first_of_group(self, extraction_no_ref, customer_empty):\n        df = transform(extraction_no_ref, customer_empty)\n        assert df[\"Reference Number\"].iloc[0] == \"10002\"\n        assert isna(df[\"Reference Number\"].iloc[1])",
+        "detail": "tests.test_transform",
+        "documentation": {}
+    },
+    {
+        "label": "TestValidationColumnAdded",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestValidationColumnAdded:\n    def test_validation_column_exists(self):\n        df, _ = validate(make_valid_row())\n        assert \"Validation\" in df.columns\n    def test_valid_row_is_ok(self):\n        df, issues = validate(make_valid_row())\n        assert df[\"Validation\"].iloc[0] == \"OK\"\n        assert len(issues) == 0\n    def test_multiple_rows_all_ok(self):\n        base = make_valid_row()",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestReferenceNumberConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestReferenceNumberConstraint:\n    def test_exactly_30_chars_ok(self):\n        df, issues = validate(make_df(**{\"Reference Number\": \"1\" * 30}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Reference Number\"]\n        assert len(col_issues) == 0\n    def test_31_chars_fails(self):\n        df, issues = validate(make_df(**{\"Reference Number\": \"1\" * 31}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Reference Number\"]\n        assert len(col_issues) == 1\n        assert \"max_chars\" in col_issues[0][\"rule\"]",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciConcentrationConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestInciConcentrationConstraint:\n    def test_zero_ok(self):\n        df, issues = validate(make_df(**{\"INCI Concentration\": 0.0}))\n        assert not any(i[\"column\"] == \"INCI Concentration\" for i in issues)\n    def test_100_ok(self):\n        df, issues = validate(make_df(**{\"INCI Concentration\": 100.0}))\n        assert not any(i[\"column\"] == \"INCI Concentration\" for i in issues)\n    def test_50_ok(self):\n        df, issues = validate(make_df(**{\"INCI Concentration\": 50.0}))\n        assert not any(i[\"column\"] == \"INCI Concentration\" for i in issues)",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciConcMinConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestInciConcMinConstraint:\n    def test_valid_value(self):\n        df, issues = validate(make_df(**{\"INCI Conc Min\": 10.0}))\n        assert not any(i[\"column\"] == \"INCI Conc Min\" for i in issues)\n    def test_above_100_fails(self):\n        df, issues = validate(make_df(**{\"INCI Conc Min\": 101.0}))\n        col_issues = [i for i in issues if i[\"column\"] == \"INCI Conc Min\"]\n        assert len(col_issues) > 0\n    def test_negative_fails(self):\n        df, issues = validate(make_df(**{\"INCI Conc Min\": -1.0}))",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciConcMaxConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestInciConcMaxConstraint:\n    def test_valid_value(self):\n        df, issues = validate(make_df(**{\"INCI Conc Max\": 90.0}))\n        assert not any(i[\"column\"] == \"INCI Conc Max\" for i in issues)\n    def test_above_100_fails(self):\n        df, issues = validate(make_df(**{\"INCI Conc Max\": 100.5}))\n        col_issues = [i for i in issues if i[\"column\"] == \"INCI Conc Max\"]\n        assert len(col_issues) > 0\n    def test_zero_ok(self):\n        df, issues = validate(make_df(**{\"INCI Conc Max\": 0.0}))",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestImpurityConcentrationConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestImpurityConcentrationConstraint:\n    def test_valid_small(self):\n        df, issues = validate(make_df(**{\"Impurity Concentration\": 0.0001}))\n        assert not any(i[\"column\"] == \"Impurity Concentration\" for i in issues)\n    def test_large_value_ok(self):\n        # No max restriction on impurity concentration\n        df, issues = validate(make_df(**{\"Impurity Concentration\": 99999.0}))\n        assert not any(i[\"column\"] == \"Impurity Concentration\" for i in issues)\n    def test_none_skipped(self):\n        df, issues = validate(make_df(**{\"Impurity Concentration\": None}))",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestAllergenConcentrationConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestAllergenConcentrationConstraint:\n    def test_valid_value(self):\n        df, issues = validate(make_df(**{\"Allergen Concentration\": 5.0}))\n        assert not any(i[\"column\"] == \"Allergen Concentration\" for i in issues)\n    def test_zero_ok(self):\n        df, issues = validate(make_df(**{\"Allergen Concentration\": 0.0}))\n        assert not any(i[\"column\"] == \"Allergen Concentration\" for i in issues)\n    def test_100_ok(self):\n        df, issues = validate(make_df(**{\"Allergen Concentration\": 100.0}))\n        assert not any(i[\"column\"] == \"Allergen Concentration\" for i in issues)",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciNameConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestInciNameConstraint:\n    def test_exactly_200_ok(self):\n        df, issues = validate(make_df(**{\"INCI Name\": \"A\" * 200}))\n        assert not any(i[\"column\"] == \"INCI Name\" for i in issues)\n    def test_201_fails(self):\n        df, issues = validate(make_df(**{\"INCI Name\": \"A\" * 201}))\n        col_issues = [i for i in issues if i[\"column\"] == \"INCI Name\"]\n        assert len(col_issues) > 0\n    def test_none_skipped(self):\n        df, issues = validate(make_df(**{\"INCI Name\": None}))",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestImpurityNameConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestImpurityNameConstraint:\n    def test_valid(self):\n        df, issues = validate(make_df(**{\"Impurity Name\": \"Lead\"}))\n        assert not any(i[\"column\"] == \"Impurity Name\" for i in issues)\n    def test_too_long_fails(self):\n        df, issues = validate(make_df(**{\"Impurity Name\": \"X\" * 201}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Impurity Name\"]\n        assert len(col_issues) > 0\n# ── Allergen Name max 200 chars ──────────────────────────────────────────────\nclass TestAllergenNameConstraint:",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestAllergenNameConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestAllergenNameConstraint:\n    def test_valid(self):\n        df, issues = validate(make_df(**{\"Allergen Name\": \"Limonene\"}))\n        assert not any(i[\"column\"] == \"Allergen Name\" for i in issues)\n    def test_too_long_fails(self):\n        df, issues = validate(make_df(**{\"Allergen Name\": \"Y\" * 201}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Allergen Name\"]\n        assert len(col_issues) > 0\n# ── INCI Function max 255 chars ──────────────────────────────────────────────\nclass TestInciFunctionConstraint:",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestInciFunctionConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestInciFunctionConstraint:\n    def test_exactly_255_ok(self):\n        df, issues = validate(make_df(**{\"INCI Function\": \"S\" * 255}))\n        assert not any(i[\"column\"] == \"INCI Function\" for i in issues)\n    def test_256_fails(self):\n        df, issues = validate(make_df(**{\"INCI Function\": \"S\" * 256}))\n        col_issues = [i for i in issues if i[\"column\"] == \"INCI Function\"]\n        assert len(col_issues) > 0\n# ── Is Incidental? allowed values ────────────────────────────────────────────\nclass TestIsIncidentalConstraint:",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestIsIncidentalConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestIsIncidentalConstraint:\n    def test_yes_ok(self):\n        df, issues = validate(make_df(**{\"Is Incidental?\": \"Yes\"}))\n        assert not any(i[\"column\"] == \"Is Incidental?\" for i in issues)\n    def test_no_ok(self):\n        df, issues = validate(make_df(**{\"Is Incidental?\": \"No\"}))\n        assert not any(i[\"column\"] == \"Is Incidental?\" for i in issues)\n    def test_y_fails(self):\n        df, issues = validate(make_df(**{\"Is Incidental?\": \"Y\"}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Is Incidental?\"]",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestIsLockedConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestIsLockedConstraint:\n    def test_yes_ok(self):\n        df, issues = validate(make_df(**{\"Is Locked\": \"Yes\"}))\n        assert not any(i[\"column\"] == \"Is Locked\" for i in issues)\n    def test_no_ok(self):\n        df, issues = validate(make_df(**{\"Is Locked\": \"No\"}))\n        assert not any(i[\"column\"] == \"Is Locked\" for i in issues)\n    def test_false_fails(self):\n        df, issues = validate(make_df(**{\"Is Locked\": \"false\"}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Is Locked\"]",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestImpurityConcentrationTypeConstraint",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestImpurityConcentrationTypeConstraint:\n    def test_ppm_ok(self):\n        df, issues = validate(make_df(**{\"Impurity Concentration type (% or PPM)\": \"PPM\"}))\n        assert not any(i[\"column\"] == \"Impurity Concentration type (% or PPM)\" for i in issues)\n    def test_percent_ok(self):\n        df, issues = validate(make_df(**{\"Impurity Concentration type (% or PPM)\": \"%\"}))\n        assert not any(i[\"column\"] == \"Impurity Concentration type (% or PPM)\" for i in issues)\n    def test_ppm_lowercase_fails(self):\n        df, issues = validate(make_df(**{\"Impurity Concentration type (% or PPM)\": \"ppm\"}))\n        col_issues = [i for i in issues if i[\"column\"] == \"Impurity Concentration type (% or PPM)\"]",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "TestIssueStructure",
+        "kind": 6,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "class TestIssueStructure:\n    def test_issue_has_required_keys(self):\n        df, issues = validate(make_df(**{\"Is Locked\": \"WRONG\"}))\n        assert len(issues) > 0\n        issue = issues[0]\n        assert \"row\"    in issue\n        assert \"column\" in issue\n        assert \"value\"  in issue\n        assert \"rule\"   in issue\n        assert \"detail\" in issue",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "make_df",
+        "kind": 2,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "def make_df(**kwargs):\n    \"\"\"Build a single-row DataFrame with given column values.\"\"\"\n    return pd.DataFrame({k: [v] for k, v in kwargs.items()})\ndef make_valid_row():\n    \"\"\"Return a fully valid single-row DataFrame that passes all constraints.\"\"\"\n    return make_df(**{\n        \"Trade Name\":                             \"Valid Trade\",\n        \"Manufacturer\":                           \"Corp\",\n        \"Supplier&Distributor\":                   \"10001\",\n        \"Reference Number\":                       \"10001\",",
+        "detail": "tests.test_validate",
+        "documentation": {}
+    },
+    {
+        "label": "make_valid_row",
+        "kind": 2,
+        "importPath": "tests.test_validate",
+        "description": "tests.test_validate",
+        "peekOfCode": "def make_valid_row():\n    \"\"\"Return a fully valid single-row DataFrame that passes all constraints.\"\"\"\n    return make_df(**{\n        \"Trade Name\":                             \"Valid Trade\",\n        \"Manufacturer\":                           \"Corp\",\n        \"Supplier&Distributor\":                   \"10001\",\n        \"Reference Number\":                       \"10001\",\n        \"INCI Name\":                              \"Water\",\n        \"CAS INCI / Incidental\":                  \"10001\",\n        \"Is Incidental?\":                         \"No\",",
+        "detail": "tests.test_validate",
         "documentation": {}
     },
     {

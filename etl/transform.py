@@ -90,7 +90,7 @@ def _build_row(src_row: pd.Series, lookup: pd.DataFrame, is_first: bool) -> dict
         "Price":                                  None,
         "Price: From":                            None,
         "Price: To":                              None,
-        "Description":                            clean_text(get_b_field(ref, 'Additional Description'), 2000),
+        "Description":                            clean_text(src_row.get("Additional Description"), 2000),
     }
 
 
